@@ -3,7 +3,8 @@
 // (But you could use ES2015 features supported by your Node.js version)
 
 const debug = process.env.NODE_ENV !== 'production'
+const withImages = require('next-images')
 
-module.exports = {
-  assetPrefix: !debug ? '/Next-gh-page-example/' : '',
-}
+module.exports = withImages({
+  assetPrefix: !debug ? '/mmdb-fe/' : '',
+})
